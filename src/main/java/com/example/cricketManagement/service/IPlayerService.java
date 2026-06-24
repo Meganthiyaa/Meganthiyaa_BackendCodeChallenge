@@ -16,4 +16,6 @@ public interface IPlayerService {
 	public Player updatePlayer(int playerId,PlayerDto dto);
 	
 	public void deleteById(int playerId);
+	
+	public List<Player> getPlayerByMatches(int totalMatches);
 }

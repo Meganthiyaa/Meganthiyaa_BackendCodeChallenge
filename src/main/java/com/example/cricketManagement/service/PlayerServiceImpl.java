@@ -70,4 +70,11 @@ public class PlayerServiceImpl implements IPlayerService{
 		
 	}
 
+	@Override
+	public List<Player> getPlayerByMatches(int totalMatches) {
+				return repo.findByTotalMatchesGreaterThan(totalMatches);
+	}
+	
+	
+
 }

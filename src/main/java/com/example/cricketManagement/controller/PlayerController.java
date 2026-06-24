@@ -49,4 +49,9 @@ public class PlayerController {
 		service.deleteById(playerId);
 		return "Player record deleted successfully";
 	}
+	
+	@GetMapping("/matches/{totalMatches}")
+	public List<Player> getPlayerByMatches(@PathVariable int totalMatches){
+		return service.getPlayerByMatches(totalMatches);
+	}
 }
