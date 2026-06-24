@@ -4,6 +4,7 @@ import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Pattern;
 
 public class PlayerDto {
 	
@@ -17,7 +18,10 @@ public class PlayerDto {
 	@NotNull
 	private int jerseyNumber;
 	
-	@NotBlank
+	 @Pattern(
+		        regexp = "Batsman|Bowler|Keeper|All Rounder",
+		        message = "Role must be Batsman, Bowler, Keeper or All Rounder"
+		    )
 	private String role;
 	
 	@NotNull
